@@ -1,0 +1,232 @@
+# Installation Instructions for the SpecEd app
+# Erica Hollis
+# June 22, 2010
+
+
+1. Operating System requirements:
+
+	a. Unix-like operating system
+
+
+2. Prerequisites:
+
+	a. A subversion account
+
+	b. An elvis account
+
+	c. Access to the URL for the SpecEd app
+
+	d.  A c compiler (such as gcc)
+
+		http://gcc.gnu.org/install/index.html
+
+	e. A 'make' utility
+
+		http://ftp.gnu.org/pub/gnu/make/
+
+
+
+3. Install Subversion
+
+
+	a. For Solaris users:
+
+		command line: 
+
+			# pkg install SUNWsvn
+
+	b.  Other operating systems - use package, binary, or source:
+
+		Use your system's native package distribution system:
+
+			Find some commands here: http://subversion.apache.org/packages.html
+
+		Binary:
+	
+			http://subversion.apache.org/packages.html
+
+		Source:
+
+			 http://subversion.apache.org/source-code.html
+
+
+5. Checkout the SpecEd App
+
+	Go to the directory you want to put it in
+
+		# svn co URL
+
+
+6.  Install Perl from Source:
+
+	*** A helpful website: http://notallmicrosoft.blogspot.com/2005/11/installing-perl-apache-on-solaris-10.html ***
+
+
+	a. Save the perl-5.12.1.tar.gz file from:
+
+		http://www.cpan.org/src/README.html
+
+	b. Unzip the file:
+
+		Go to the directory that contains the file
+
+			# gtar xfz perl-5.8.7.tar.gz
+
+	c. Set up the environment variables:
+
+		# env PATH=/usr/bin:/usr/sbin:/bin:/sbin:/usr/ccs/bin
+
+	d.  Install perl - follow the instructions on the INSTALL/README files
+
+		Default install:	# sh Configure -de
+				 	# make
+					# make test
+					# make install 
+
+		
+
+**Notes about the CPAN command line:
+
+~ If a module fails 'install', you can try 'force install'
+~ To install all dependencies without prompting => 	cpan> o conf prerequisites_policy follow
+							cpan> o conf commit
+
+
+7.  Install Tk module:
+
+	*Solaris users:
+
+		# pkg install x11/header
+
+
+	install through CPAN command line, after setting up the path:
+
+		# env PATH=/path/to/perl/bin:${PATH} perl -MCPAN -e shell
+
+
+	a. Get newest version of CPAN
+
+			cpan> install CPAN::Bundle
+
+			cpan> reload CPAN
+
+	b.  LWP (The World-Wide Web library for Perl)
+
+			cpan> install LWP
+
+	c. install Tk
+
+			cpan> install Tk
+
+
+
+8. Install Oracle Instant Client - Basic and Oracle Instant Client - SDK:
+
+	a. Download the files:
+
+		http://www.oracle.com/technology/software/tech/oci/instantclient/index.html
+
+	b. Unzip the files:
+
+		# cd /tmp
+
+		# unzip file.zip
+
+	c. Move it to the directory you want
+
+		# mv instantclient_11_2 /opt
+
+		# mv SDK /opt/instantclient_11_2
+
+
+9. Install modules - DBI (Datebase Interface), and others
+
+		# env PATH=/path/to/perl/bin:${PATH} perl -MCPAN -e shell
+
+		cpan> install Bundle::DBI
+
+		cpan> install Date::Calc
+
+		cpan> install Date::Manip
+
+		cpan> install Date::Simple
+
+		cpan> install DBD::CSV
+
+	exit:
+
+		cpan> q
+
+
+
+10.  Install DBD::Oracle - an Oracle interface
+
+** A helpful website if you have problems installing DBD/Oracle: http://cpansearch.perl.org/src/PYTHIAN/DBD-Oracle-1.19/README **
+/
+	set the environment variables to point to the instant client directory:
+
+		# export ORACLE_HOME=/path/to/instant_client
+
+		# export LD_LIBRARY_PATH=/path/to/instant_client/
+
+		# env PATH=/path/to/perl/bin:${PATH} perl -MCPAN -e shell
+
+		cpan> install DBD::Oracle
+
+		cpan> q
+
+11. Set TNS_ADMIN:
+
+	# cd /path/to/instant_client
+
+	create a file called "tnsnames.ora" with your test editor
+
+	insert this into the file:
+
+		# ED11=
+		(DESCRIPTION=
+		        (ADDRESS_LIST=
+		                (ADDRESS=
+		                        (PROTOCOL=TCP)
+		                        (HOST=146.186.107.80)
+		                        (PORT=1526)
+		                )
+		        )
+		        (CONNECT_DATA=
+		                (SID=ED11)
+		        )
+		)
+
+	save and exit the text editor
+
+	set the TNS_ADMIN environment variable to point to the file:
+
+		# TNS_ADMIN=/path/to/instant_client/
+
+		# export TNS_ADMIN
+	
+
+
+12. Run the application!
+
+		env SPECEDHOME=/path/to/SpecEd2009/ PATH=/path/to/perl/bin:${PATH} perl SpecEd2009.pl --gui
+
+
+
+I. Links
+
+	a. gcc: http://gcc.gnu.org/
+
+	b. make: http://ftp.gnu.org/pub/gnu/make/
+
+	c. Subversion binary code: http://subversion.apache.org/packages.html
+
+	d. Subversion source code: http://subversion.apache.org/source-code.html
+
+	e. Perl source code: http://www.cpan.org/src/README.html
+
+	f. Oracle Instant Client: http://www.oracle.com/technology/software/tech/oci/instantclient/index.html
+
+	g. CPAN modules: www.cpan.org
+
+

@@ -1,0 +1,58 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no"/>
+  <style type="text/css">
+    html {
+      margin: 0 auto;
+    }
+    body {
+      font-family: Karla, sans-serif;
+      font-size: 16px;
+      color: white;
+      width: 98%;
+      margin: 0 auto;
+      background-color: black;
+      padding-left: 20px;
+    }
+    .back {
+      text-align: right;
+      padding: 15px;
+    }
+    .back-link {
+      color: #B3525F;
+      font-size: 12px;
+      text-decoration: none;
+    }
+    .image {
+      width: 100%;
+    }
+  </style>
+
+  <head>
+    <title>Gifs</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  </head>
+
+  <body>
+    <div class='back'>
+      <a href='assignment4.html' class='back-link'>Back</a>
+    </div>
+    <div id='sentence'>My day at work started as usual.(click to continue)</div>
+    <img src="gifs/kitty_office.gif" id='gif' style="cursor:pointer" onClick="javascript:change()" />
+  </body>
+</html>
+
+<script type="text/javascript">
+  var imgs=new Array("gifs/kitty_office.gif","gifs/cat_hand.gif","gifs/cat_steals_food.gif","gifs/cat_in_box.gif","gifs/oh_my.gif","gifs/happy.gif","gifs/business_cat.gif","gifs/the_end.gif");
+  var sentences=new Array("My day at the office started as usual.","Until my lunch break. <br />The lid to my tuna sandwich was stuck and Bob would not help me out.<br />I don't think he likes me.","But I got him back.","To top it all off, on the way back to my cubicle, I tripped. <br/>How embarrassing.","But then my day turned around. <br/>First, Cathy told me some very juicy gossip.", "Then, my boss told me I would be taking my first business trip, and it was to Japan!<br/>My day really turned around.","The trip was very nice.","The end.<br/>(I knew there was a reason I have been collecting gifs lately.)");
+  var x=0;
+
+  function change() {
+    document.getElementById('gif').src=imgs[++x];
+    document.getElementById('sentence').innerHTML=sentences[x];
+    if (x==7) {
+      x=-1
+    } 
+  }
+</script>

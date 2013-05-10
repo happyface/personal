@@ -1,0 +1,269 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no"/>
+  <style type="text/css">
+    html {
+      margin: 0;
+      height: 100%;
+    }
+    body {
+      font-family: Karla, sans-serif;
+      font-size: 16px;
+      line-height: 140%;
+      height: 100%;
+      width: 80%;
+      margin: 0 auto;
+      margin-top: -1.5em;
+    }
+    b {
+      font-weight: 600;
+      color: #0147FA;
+    }
+    h1 {
+      font-size: 130%;
+      text-align: center;
+      font-weight: bold;
+      line-height: 1em;
+    }
+    h2 {
+      font-family: fantasy, serif;
+      font-size: 210%;
+      text-align: center;
+      font-weight: normal;
+      line-height: 1em;
+      padding: 1em 0 0 0;
+    }
+    h3 {
+      font-size: 125%;
+      text-align: left;
+      font-weight: normal;
+      line-height: 2em;
+      padding-left: 3em;
+    }
+    h4 {
+      font-size: 130%;
+      text-align: left;
+      font-weight: bold;
+      line-height: 2em;
+      padding-right: 3em;
+    }
+    header {
+      background: #A4DCD1;
+      margin: 0;
+    }
+    footer {
+      position: absolute;
+      height: 50px;
+      bottom: 0;
+      width: 60%;
+      left: 20%;
+      right: 20%;
+      background: #A4DCD1;
+    }
+    p {
+      font-size: 105%;
+      width: 97%;
+      margin: 0 auto;
+    }
+    a:link {
+      color: blue;
+      text-decoration: none;
+    }
+    a:visited {
+      color: blue;
+      text-decoration: none;
+    }
+    a:hover {
+      color: green;
+      text-decoration: none;
+    }
+    .regular {
+      background: #A4DCD1;
+      width: 25%;
+      color: white;
+      text-align: center;
+    }
+    .highlighted {
+      background-color: black;
+      color: white;
+      text-align: center;
+    }
+    a.dark-link {
+      color: blue;
+      text-decoration: none;
+    }
+    .plain-button {
+      background-color: transparent;
+      border: transparent;
+      cursor: pointer;
+      color: blue;
+    }
+    .plain-button:hover {
+      background-color: transparent;
+      border: transparent;
+      cursor: pointer;
+      color: green;
+    }
+    article {
+      padding-bottom: 50px;
+    }
+    div.me {
+      style: inline-block;
+      float: right;
+      padding: .5em;
+    }
+
+  </style>
+
+  <head>
+    <title>Personal Page</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  </head>
+
+  <body>
+    <header>
+      <hgroup> 
+        <h2>
+          Erica Hollis
+        </h2>
+        <center>State College, PA</center>
+        <center><a href="mailto:erica.r.hollis@gmail.com">erica.r.hollis@gmail.com</a></center><br />
+      </hgroup>
+     <div>
+       <table width="100%">
+         <hr width="100%">
+         <tr>
+           <td id='tab-header1' class='highlighted'>
+             <button class='plain-button' onClick="javascript:tabChange(1);">Resume</button>
+           </td>
+           <td id='tab-header2' class='regular'>
+             <button class='plain-button' onClick="javascript:tabChange(2);">Projects</button>
+           </td>
+           <td id='tab-header3' class='regular'>
+             <button class='plain-button' onClick="javascript:tabChange(3);">Extra</button>
+           </td>
+           <td id='tab-header4' class='regular'>
+             <button class='plain-button' onClick="javascript:tabChange(4);">About Me</button>
+           </td>
+         </tr>
+       </table>
+     </div>
+    </header>
+
+    <article>
+     <div id='tab4' style="display: none; width: 90%; margin: 0 auto;">
+       <h4>About me</h4>
+       <div class="me"><img src="me.jpg" /></div>
+       <p>
+         Hi!  My name is Erica Hollis.  I live in State College, PA.  I just recently graduated from Penn State University
+         this past December with a bachelor's degree in Computer Science.  I love programming because it is logical yet 
+         artistic, and challenging yet it all makes sense after you find the solution.  I learned a lot at Penn State.  I learned 
+         algoriths in an Algorithms and Data Structures course, computer systems theory in an Operating Systems course, 
+         abstract critical thinking and mathematics in various advanced mathematics courses, and the
+         theoretical aspects of computer science from a Theory of Computation course.  I develeped an interest in computer
+         security which was strengthened by a Computer and Network Security course along with a Factorization and 
+         Primality course.<br /><br />
+
+         During the summer of 2010, I obtained an internship at the Applied Research Lab, which is a company affiliated with Penn State.  
+         I have worked there part time during semesters and full time during the summer, and I currently still work there.  
+         I have really enjoyed this job for many reasons.  
+         They encourage learning and have helped me to build many skills, including database administration, working on a Unix platform, 
+         technical writing, communicating with customers, working in teams, programming in Ruby on Rails to maintain and upgrade a website, 
+         and programming in Perl to maintain an application.<br /><br />
+ 
+         I have lived in Pennsylvania all my life. I took up snowboarding last year, which has made the winters here much more enjoyable. 
+         Now I love experiencing the change in seasons.  Besides snowboarding,
+         I enjoy playing the piano, reading, and staying active.  Some things on my bucket list are to travel all over the world,
+         go sky diving, and write a short story.
+       </p>
+     </div>
+
+     <div id='tab1' style="width: 90%; margin: 0 auto;">
+       <br /><br />
+        <div style="line-height: 150%;">
+          <b>OBJECTIVE</b><br />
+          <p>Seeking a full time position in the field of software engineering, </p><br />
+
+          <b>SUMMARY</b>
+          <ul>
+            <li>Skilled at working in a UNIX or Windows administrative environment</li>
+ 	    <li>Strong knowledge of programming concepts and algorithms</li>
+            <li>Works well in teams or independently, with a passion for problem solving and learning new skills</li>
+          </ul>
+
+          <b>EDUCATION</b><br />
+          <p>The Pennsylvania State University, University Park, PA<br />
+          Bachelor of Science in Computer Science, Minor in Mathematics, December 2012<br /><br />
+          <b>Selected Courses</b><br />
+          <p><i>Programming and Computer Systems:</i>  <a href="playroom.zip" target="_blank">Operating System Concepts</a>, Programming Language Concepts, Database Management Systems, Theory of Computation, <a href="p3-refmon.zip" target="_blank">Computer and Network Security</a><br />
+          <i> Mathematics:</i> Data Structures and Algorithms, Statistics, Linear Algebra, Factorization and Primality</p><br />
+
+          <b>EXPERIENCE</b><br />
+          <p>The Applied Research Lab at Penn State, State College, PA<br />
+          R&D Engineer, June 2010 - Present
+          <ul>
+            <li>Communicates with customers to resolve problems and add features to two project management websites with over 30 webpages each (iVertical-Lift.org and iRotor.org)</li>
+            <li>Redesigned the front end of the (<a href="http://www.ivertical-lift.org" target="_blank">iVertical-Lift.org</a> website using the Ruby on Rails programming language web framework, HTML, CSS, and Javascript to create a <a href="http://blog.teamtreehouse.com/beginners-guide-to-responsive-web-design" target="_blank">responsive web design</a></li>
+            <li>Updates an application using the Perl programming language and wrote an <a href="installer.nsi" target="_blank">installer</a> using nsis for the Penn Data Special Education Reporting System, a student data collection program for Pennsylvania public schools</li>
+            <li>Works with PostgreSQL and Oracle databases in a Unix environment, including writing SQL commands, creating tables, and migrating databases</li>
+            <li>Writes technical documentation, including <a href="install.txt" target="_blank">instruction sets</a> and <a href="http://www.ivertical-lift.org/public/download?file=user_guide"  target='_blank'>user guides</a></li>
+            <li>Worked full-time during summers and part-time during semesters</li>
+          </ul></p>
+
+          <b>Skills</b><br />
+          <p>Programming languages: C, C++, Java, Ruby on Rails, Perl, Javascript & JSON, CSS, MIPS, Matlab<br />
+          Source Code Control: Subversion, Git<br />
+          Databases: Oracle, PostgreSQL<br />
+          Operating Systems: Windows, UNIX/Linux</p><br />
+
+          <b>Awards & Activities:</b><br />
+          <p>Timothy and Roseann Kowalski Trustee Scholarship, 2010-2012<br />
+          President of the American Civil Liberties Union Club, 2012</p>
+      </div>
+    </div>
+      <div id='tab2' style="display: none">
+       <div>
+        <h4>Projects</h4>
+        <h5>Websites</h5>
+        <a href="art101.html" target='_blank'> The Website made for the Penn State class 'Art 101: Web Design' </a><br /><br />
+        <a href="blogs/portfolio" target='_blank'> The Blog Website made for the Penn State class 'English 202C: Technical Writing' </a> (This site has not been updated since December 2010)<br /><br />
+        <h5>Reference Monitors</h5>
+        <a href="./p3-refmon.tgz"> C Program for a Security class that sets and tests a reference monitor. (.tgz archive)</a><br /><br />
+        <a href="./p3-refmon.zip"> C Program for a Security class that sets and tests a reference monitor. (.zip archive)</a><br /><br />
+        <h5>Inodes</h5>
+        <a href="./inodes.c"> C program that retrieves and manipulates inodes. (.c file)</a><br /><br />
+        <h5>Signal Handlers</h5>
+        <a href="./signal_handlers.c"> C program that writes and install signal handlers. (.c file)</a><br /><br />
+        <h5>Shared Resource Handling</h5>
+        <a href="./playroom.tar"> C program that uses mutual exlusion and conditions to implement shared resource rules. (.tar archive)</a><br /><br />
+        <a href="./playroom.zip"> C program that uses mutual exlusion and conditions to implement shared resource rules. (.zip archive)</a><br /><br />
+       </div>
+      </div>
+      <div id='tab3' style="display: none">
+        <h4>Extras</h4>
+        <h5>Documentation</h5>
+        <a href="http://www.ivertical-lift.org/public/download?file=user_guide" target='_blank'> User Guide for a Website</a><br /><br />
+      </div>
+      
+    </article>
+    </footer>
+  </body>
+</html>
+
+<script type="text/javascript">
+  function tabChange(tabChoice) {
+    document.getElementById('tab1').style.display = 'none';
+    document.getElementById('tab2').style.display = 'none';
+    document.getElementById('tab3').style.display = 'none';
+    document.getElementById('tab4').style.display = 'none';
+    document.getElementById('tab-header1').className = 'regular';
+    document.getElementById('tab-header2').className = 'regular';
+    document.getElementById('tab-header3').className = 'regular';
+    document.getElementById('tab-header4').className = 'regular';
+
+    document.getElementById('tab' + tabChoice).style.display = 'block';
+    document.getElementById('tab-header' + tabChoice).className = 'highlighted';
+
+  }
+</script>

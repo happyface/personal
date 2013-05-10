@@ -1,0 +1,71 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no"/>
+  <style type="text/css">
+    html {
+      margin: 0 auto;
+    }
+    body {
+      font-family: Karla, sans-serif;
+      font-size: 16px;
+      width: 100%;
+      margin: 0px;
+      padding-bottom: 0;
+      background-color: #369; 
+    }
+    .background-image {
+      width: 60%;
+      margin: 0 auto;
+      display: block;
+    }
+    .background-image-container {
+      margin-top: -10%;
+    } 
+    .mystery-box-container {
+      position: relative;
+      width: 40%;
+      margin-top: -10%;
+      z-index: 6;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .mystery-box-input {
+      height: 40px;
+      width: 100%;
+      font-size: 24px;
+    }
+    .submit {
+      width: 40%;
+      height: 30px;
+      margin: 3% 30% 0 30%;
+    }
+    .back {
+      text-align: right;
+      color: #846FA6;
+      font-size: 12px;
+      text-decoration: none;
+      padding: 2em;
+    }
+  </style>
+
+  <head>
+    <title>Spooky Mystery Box</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  </head>
+
+  <body>
+    <div class='back'>
+      <a href="assignment4.html">Back</a>
+    </div>
+    <div class='background-image-container'>
+      <img src="reddit.png" class="background-image" />
+    </div> 
+    <div class='mystery-box-container'>
+      <form method="get" action="redirect.php" target="_blank">
+        <input type='text' class='mystery-box-input' name="search_terms"></textarea>
+        <input name="submit" type="submit" value="Submit" class='submit' />
+      </form>
+    </div>
+  </body>
+</html>
